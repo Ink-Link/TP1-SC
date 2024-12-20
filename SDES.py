@@ -46,8 +46,6 @@ def fk(bits, chave):
   left, right = ''.join(bits[:4]), ''.join(bits[4:])
   right_exp = ''.join(perm(right, EP))
 
-  chave = ''.join(chave)
-
   xor = '{:08b}'.format(int(right_exp, 2) ^ int(chave, 2))
   sbox = sBox(xor[:4], S0) + sBox(xor[4:], S1)
 
