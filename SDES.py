@@ -54,6 +54,7 @@ def fk(bits, chave):
 
 def encSDES(bits, chave):
   k1, k2 = genChave(chave)
+  print("Subchaves:", k1, k2)
 
   bits_perm = perm(bits, IP)
   parte1 = fk(bits_perm, k1)
